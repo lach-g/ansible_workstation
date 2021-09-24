@@ -11,6 +11,7 @@
         - tmux
 
   - name: copy example
+    become_user: lach
     copy:                           # Example of another ansible module
       src: files/example.txt
       dest: ~/Downloads/example.txt
