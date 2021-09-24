@@ -15,5 +15,5 @@
     copy:                           # Example of another ansible module
       src: files/example.txt
       dest: ~/Downloads/example.txt
-      owner: root
-      group: root
+      owner: lach
+      group: lach
