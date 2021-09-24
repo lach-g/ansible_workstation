@@ -1,11 +1,18 @@
 ---
 - hosts: localhost
   connection: local
-  become: true        # Enabling sudo
+  become: true                    # Enabling sudo
 
   tasks:
-    - name: install packages
-      package:
-        name:
-          - htop
-          - tmux
+  - name: install packages        # Label for cmd line output
+    package:                      # Using module "package" to install programs
+      name:
+        - htop
+        - tmux
+
+  name: copy example
+  copy:                           # Example of another ansible module
+    src: files/example.txt
+    dest: ~/Downloads/example.txt
+    owner: root
+    group: root
